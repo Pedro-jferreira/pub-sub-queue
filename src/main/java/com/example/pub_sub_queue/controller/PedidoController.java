@@ -18,8 +18,13 @@ public class PedidoController {
         return "Pedido criado com sucesso!";
     }
 
-    @GetMapping("/getPedidos")
-    public List<String> getPedidos() {
+    @GetMapping("/getAllPedidos")
+    public List<String> getAllPedidos() {
         return List.of("Pedido 1", "Pedido 2");
+    }
+
+    @GetMapping("/getPedido/{codigo}")
+    public String getPedido() {
+        return "Pedido 1";
     }
 }
