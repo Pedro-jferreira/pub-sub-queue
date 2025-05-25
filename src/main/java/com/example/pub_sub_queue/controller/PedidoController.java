@@ -5,6 +5,7 @@ import com.example.pub_sub_queue.service.impl.PedidoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -15,7 +16,9 @@ public class PedidoController {
 
     @PostMapping("/createPedido")
     public String createPedido(@RequestBody PedidoInputDTO pedidoInputDTO) {
-        return "Pedido criado com sucesso!";
+        ArrayList<PedidoInputDTO> pedidos = new ArrayList<>();
+        pedidos.add(pedidoInputDTO);
+        return "Pedido: " + pedidos;
     }
 
     @GetMapping("/getAllPedidos")
