@@ -20,6 +20,6 @@ public class PedidoController {
 
     @GetMapping("/getPedidos")
     public List<String> getPedidos() {
-        return "Exemplo de pedido";
+        return List.of("Pedido 1", "Pedido 2");
     }
 }
