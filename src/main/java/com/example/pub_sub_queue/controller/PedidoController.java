@@ -1,7 +1,7 @@
 package com.example.pub_sub_queue.controller;
 
 import com.example.pub_sub_queue.controller.dto.input.PedidoInputDTO;
-import com.example.pub_sub_queue.service.PedidoService;
+import com.example.pub_sub_queue.service.impl.PedidoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/pedidos")
 public class PedidoController {
     @Autowired
-    PedidoService pedidoService;
+    PedidoServiceImpl pedidoService;
 
     @PostMapping("/createPedido")
     public String createPedido(@RequestBody PedidoInputDTO pedidoInputDTO) {
@@ -24,7 +24,7 @@ public class PedidoController {
     }
 
     @GetMapping("/getPedido/{codigo}")
-    public String getPedido() {
+    public String getPedido(@PathVariable String codigo) {
         return "Pedido 1";
     }
 }
