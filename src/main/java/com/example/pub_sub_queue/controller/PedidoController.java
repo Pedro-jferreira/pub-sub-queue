@@ -16,6 +16,7 @@ public class PedidoController {
     @Autowired
     PedidoServiceImpl pedidoService;
 
+    // Simula o banco de dados
     ArrayList<PedidoInputDTO> pedidos = new ArrayList<>();
 
     @PostMapping("/createPedido")
