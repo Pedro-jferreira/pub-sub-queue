@@ -3,7 +3,9 @@ package com.example.pub_sub_queue.controller;
 import com.example.pub_sub_queue.controller.dto.input.PedidoInputDTO;
 import com.example.pub_sub_queue.service.impl.PedidoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +17,10 @@ public class PedidoController {
     PedidoServiceImpl pedidoService;
 
     @PostMapping("/createPedido")
-    public String createPedido(@RequestBody PedidoInputDTO pedidoInputDTO) {
+    public ResponseEntity<String> createPedido(@RequestBody PedidoInputDTO pedidoInputDTO) {
         ArrayList<PedidoInputDTO> pedidos = new ArrayList<>();
         pedidos.add(pedidoInputDTO);
-        return "Pedido: " + pedidos;
+        return new ResponseEntity<>("Pedido criado com sucesso: " + pedidos, HttpStatus.OK);
     }
 
     @GetMapping("/getAllPedidos")
