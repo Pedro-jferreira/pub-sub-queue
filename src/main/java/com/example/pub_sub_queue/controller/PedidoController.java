@@ -16,20 +16,21 @@ public class PedidoController {
     @Autowired
     PedidoServiceImpl pedidoService;
 
+    ArrayList<PedidoInputDTO> pedidos = new ArrayList<>();
+
     @PostMapping("/createPedido")
     public ResponseEntity<String> createPedido(@RequestBody PedidoInputDTO pedidoInputDTO) {
-        ArrayList<PedidoInputDTO> pedidos = new ArrayList<>();
         pedidos.add(pedidoInputDTO);
-        return new ResponseEntity<>("Pedido criado com sucesso: " + pedidos, HttpStatus.OK);
+        return new ResponseEntity<>("Pedido criado com sucesso: " + pedidos, HttpStatus.CREATED);
     }
 
     @GetMapping("/getAllPedidos")
-    public List<String> getAllPedidos() {
-        return List.of("Pedido 1", "Pedido 2");
+    public ResponseEntity<List<String>> getAllPedidos() {
+        return new ResponseEntity<>(List.of(pedidos.toString()), HttpStatus.OK);
     }
 
     @GetMapping("/getPedido/{codigo}")
-    public String getPedido(@PathVariable String codigo) {
-        return "Pedido 1";
+    public ResponseEntity<String> getPedido(@PathVariable String codigo) {
+        return new ResponseEntity<>("Pedido: " + codigo, HttpStatus.OK);
     }
 }
