@@ -32,6 +32,7 @@ public class PedidoController {
 
     @GetMapping("/getPedido/{codigo}")
     public ResponseEntity<String> getPedido(@PathVariable String codigo) {
-        return new ResponseEntity<>("Pedido: " + codigo, HttpStatus.OK);
+        PedidoInputDTO pedido = pedidos.stream().filter(p -> p.getCodigo().equals(codigo)).findFirst().orElse(null);
+        return new ResponseEntity<>("Pedido: " + pedido, HttpStatus.OK);
     }
 }
