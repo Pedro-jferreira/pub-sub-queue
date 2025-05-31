@@ -17,13 +17,16 @@ Os eventos pedido-processado e pedido-entregue são publicados para os serviços
 Notificação (para avisar o cliente)
 Auditoria (para registrar as ações)
 
-Projeto feito com SpringBoot, RabbitMQ e utilizando imagem Docker, com o docker desktop aberto, dar o comando:
-docker run -d --hostname rabbit --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-Para monitorar se o docker está rodando:
-docker ps
-Se precisar reiniciar o container:
-docker restart rabbit
+
+Projeto feito com SpringBoot, RabbitMQ e utilizando imagem Docker, com o docker desktop aberto, dar o comando: docker run -d --hostname rabbit --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+Para monitorar se o docker está rodando: docker ps
+
+Se precisar reiniciar o container: docker restart rabbit
+
 
 Projeto desenvolvido por: Ariana Mesquita Gonçalves, Davi Antônio Ferreira Félix e Pedro Henrique de Jesus Ferreira
+
 Para a disciplina Sistemas Distribuídos - Prof. Junio Cesar de Lima
+
 Instituto Federal Goiano - Campus Urutaí - Sistemas de Informação
