@@ -39,19 +39,14 @@ Cada etapa gera eventos (**pub/sub**) que notificam outros serviços:
 
 ```bash
 docker run -d --hostname rabbit --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+```
 
 ✅ Verificar se o container está rodando
-bash
-Copiar
-Editar
 docker ps
 
 ---
 
 🔄 Reiniciar o container (se necessário)
-bash
-Copiar
-Editar
 docker restart rabbit
 
 ---
