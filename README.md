@@ -23,3 +23,7 @@ Para monitorar se o docker está rodando:
 docker ps
 Se precisar reiniciar o container:
 docker restart rabbit
+
+Projeto desenvolvido por: Ariana Mesquita Gonçalves, Davi Antônio Ferreira Félix e Pedro Henrique de Jesus Ferreira
+Para a disciplina Sistemas Distribuídos - Prof. Junio Cesar de Lima
+Instituto Federal Goiano - Campus Urutaí - Sistemas de Informação
