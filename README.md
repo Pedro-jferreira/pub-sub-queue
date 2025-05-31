@@ -52,6 +52,7 @@ docker restart rabbit
 ---
 
 🧑‍💻 Projeto desenvolvido por:
+
 Ariana Mesquita Gonçalves
 
 Davi Antônio Ferreira Félix
@@ -62,6 +63,9 @@ Pedro Henrique de Jesus Ferreira
 
 🎓 Disciplina
 Sistemas Distribuídos
+
 Prof. Junio Cesar de Lima
+
 Instituto Federal Goiano - Campus Urutaí
+
 Curso: Sistemas de Informação
