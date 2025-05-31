@@ -13,4 +13,14 @@ public class NotificationConsumer {
     public Consumer<Order> notificacaoPedidoProcessado() {
         return pedido -> System.out.println("🔔 Notificando cliente: " + pedido.getNameCliente() + " sobre o pedido " + pedido.getId());
     }
+
+    @Bean
+    public Consumer<Order> notificacaoPedidoEmTransporte() {
+        return pedido -> System.out.println("📦 Notificando cliente: " + pedido.getNameCliente() + " que o pedido está em transporte.");
+    }
+
+    @Bean
+    public Consumer<Order> notificacaoPedidoEntregue(){
+        return pedido -> System.out.println("🔔 Notificando cliente: " + pedido.getNameCliente() + " que o pedido " + pedido.getId() + " foi entregue.");
+    }
 }

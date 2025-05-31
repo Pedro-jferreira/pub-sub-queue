@@ -18,4 +18,20 @@ public class AuditConsumer {
             System.out.println("📝 Auditando pedido: " + pedido.getId());
         };
     }
+
+    @Bean
+    public Consumer<Order> auditoriaPedidoEmTransporte() {
+        return pedido -> {
+            internalAudit.addOrder(pedido);
+            System.out.println("🧾 Auditando pedido em transporte: " + pedido.getId());
+        };
+    }
+
+    @Bean
+    public Consumer<Order> auditoriaPedidoEntregue(){
+        return pedido -> {
+            internalAudit.addOrder(pedido);
+            System.out.println("📚 Auditoria finalizada: Pedido " + pedido.getId() + " entregue.");
+        };
+    }
 }
